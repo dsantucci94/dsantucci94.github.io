@@ -6,7 +6,7 @@ body{
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    border: 2px solid #ff7600;
+    /* border: 2px solid #ff7600; */
     background-image: url('../img/q6fQRZC.png');
     position: relative;
     -webkit-animation: circle 4s infinite;
@@ -16,43 +16,43 @@ body{
     border-radius: 100%;
       width: 100px;
       height: 100px;
-    border: 6px solid #ff7600;
+    /* border: 6px solid #ff7600; */
     position: relative;
     -webkit-animation: circle 10s infinite;
     animation: circle 10s infinite;
   }
   @-webkit-keyframes circle {
-      0%   {border: 2px solid #34dddd; left:0px; top:0px;}
-      25%  {border: 2px solid red; left:800px; top:200px;}
-      50%  {border: 2px solid yellow; left:200px; top:60px;}
-      75%  {border: 2px solid #34dddd; left:50px; top:200px;}
-      100% {border: 2px solid #34dddd; left:0px; top:0px;}
+      0%   {border: 2px solid black; left:0px; top:0px;}
+      25%  {border: 2px solid black; left:800px; top:200px;}
+      50%  {border: 2px solid black; left:200px; top:60px;}
+      75%  {border: 2px solid  black; left:50px; top:200px;}
+      100% {border: 2px solid black; left:0px; top:0px;}
   }
 
   @-webkit-keyframes circle2 {
-    0%   {border: 2px solid #34dddd; left:0px; top:0px;}
-    50%  {border: 2px solid red; left:800px; top:200px;}
-    75%  {border: 2px solid yellow; left:200px; top:60px;}
-    100%  {border: 2px solid #34dddd; left:50px; top:200px;}
-    150% {border: 2px solid #34dddd; left:0px; top:0px;}
+    0%   {border: 2px solid black; left:0px; top:0px;}
+    50%  {border: 2px solid black; left:800px; top:200px;}
+    75%  {border: 2px solid black; left:200px; top:60px;}
+    100%  {border: 2px solid black; left:50px; top:200px;}
+    150% {border: 2px solid black; left:0px; top:0px;}
 }
 
   
   .square {
-      width: 50px;
-      height: 50px;
-    border: 2px solid #34dddd;
+      width: 10px;
+      height: 10px;
+    /* border: 2px solid #34dddd; */
     position: relative;
     -webkit-animation: square 4s infinite;
     animation: square 4s infinite;
   }
   
   @-webkit-keyframes square {
-      0%   {border: 2px solid #34dddd; left:400px; top:500px;}
-      25%  {border: 2px solid red; left:10px; top:60px;}
-      50%  {border: 2px solid yellow; left:100px; top:60px;}
-      75%  {border: 2px solid #34dddd; left:600px; top:30px;}
-      100% {border: 2px solid #34dddd; left:400px; top:500px;}
+      0%   {border: 2px solid black; left:400px; top:500px;}
+      25%  {border: 2px solid black; left:10px; top:60px;}
+      50%  {border: 2px solid black; left:100px; top:60px;}
+      75%  {border: 2px solid black; left:600px; top:30px;}
+      100% {border: 2px solid black; left:400px; top:500px;}
   }
   
   .triangle {
@@ -60,17 +60,17 @@ body{
       height: 0;
       border-left: 50px solid transparent;
       border-right: 50px solid transparent;
-      border-bottom: 100px solid red;
-    border: 2px solid #ff7600;
+      /* border-bottom: 100px solid red; */
+    /* border: 2px solid #ff7600; */
     position: relative;
     -webkit-animation: square 4s infinite;
     animation: square 4s infinite;
   }
   
   @-webkit-keyframes triangle {
-      0%   {border: 2px solid #34dddd; left:400px; top:500px;}
-      25%  {border: 2px solid red; left:10px; top:60px;}
-      50%  {border: 2px solid yellow; left:100px; top:60px;}
-      75%  {border: 2px solid #34dddd; left:600px; top:30px;}
-      100% {border: 2px solid #34dddd; left:400px; top:500px;}
+      0%   {border: 2px solid black; left:400px; top:500px;}
+      25%  {border: 2px solid black; left:10px; top:60px;}
+      50%  {border: 2px solid black; left:100px; top:60px;}
+      75%  {border: 2px solid  black; left:600px; top:30px;}
+      100% {border: 2px solid black; left:400px; top:500px;}
   }
