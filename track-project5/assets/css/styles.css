@@ -1,90 +1,95 @@
-body{
-  background: white;
+body {
+  background-color:#fff;
+}
+.header {
+  width:100%;
+  height:90px;
+  display:block;
   
-  min-height: 100%;
-  
-  
+}
+.name {
   text-align:center;
+  font-family:"Cantarell";
+  font-weight:700;
+  font-size:30px;
+  color:#343436;
+}
+
+.intro {
+  text-align:center;
+  font-family:"Cantarell";
+  font-size:20px;
+  margin-bottom:1%;  
+}
+
+.header h1 {
+  font-family:"Cantarell";
+  font-size:50px;
+  text-align:center;
+  color:pink;
+}
+
+
+.container {
+  width:100%;
+  height:auto;
+  display:block;
+  text-align:center;
+}
+
+.image, .image1 {
+  position:relative;
+  display:inline-block;
+  width:auto;
+  height:auto;
+
+}
+
+.image1 {
+  animation-delay: -0.75; 
+  animation-duration: 1s;
+}
+
+
+    .image {
+       animation-name: keyframes1;
+       animation-iteration-count: infinite;
+       transform-origin: 50% 10%;
+       animation-delay: -0.75; 
+  animation-duration: .8s;
   }
-  
-  img {
-  
- 
-   
-    padding: 20px;
-  
-    /* position: absolute; */
-    top: auto;
-    left: auto;
-  
-    margin: -70px 0 0 -70px;
-  
-  -webkit-transform: rotate(-40deg);
-  -moz-transform: rotate(-40deg);
-  -o-transform: rotate(-40deg);
-  -ms-transform: rotate(-40deg);
-  transform: rotate(-40deg);
-  -webkit-animation: wink 0.5s alternate infinite; /* Safari 4+ */
-    -moz-animation:    wink 0.5s alternate infinite; /* Fx 5+ */
-    -o-animation:      wink 0.5s alternate infinite; /* Opera 12+ */
-    animation:         wink 0.5s alternate infinite; /* IE 10+, Fx 29+ */
-  -webkit-transform-origin: 50% 100%;
-  -moz-transform-origin: 50% 100%;
-  -o-transform-origin: 50% 100%;
-  -ms-transform-origin: 50% 100%;
-  transform-origin: 50% 100%;
-  -webkit-animation-timing-function: ease; /* Chrome, Safari, Opera */
-  animation-timing-function: ease;
-  
-  
-  
-        
-  
-  }
-  
-  
-  
-  
-  /* Chrome, Safari, Opera */ 
-  @-webkit-keyframes wink {
-      0% {-webkit-transform: rotate(-40deg);
-  -moz-transform: rotate(-40deg);
-  -o-transform: rotate(-40deg);
-  -ms-transform: rotate(-40deg);
-  
-  }
-  
-  
-  
-  100% {-webkit-transform: rotate(40deg);
-  -moz-transform: rotate(40deg);
-  -o-transform: rotate(40deg);
-  -ms-transform: rotate(40deg);
-  transform: rotate(40deg);}
-  
-  
-  
-  
-  } 
-  
-  /* Standard syntax */ 
-  @keyframes wink {
-      
-  
-      0% {-webkit-transform: rotate(-40deg);
-  -moz-transform: rotate(-40deg);
-  -o-transform: rotate(-40deg);
-  -ms-transform: rotate(-40deg);
-  transform: rotate(-40deg);
-  }
-  
-  
-  100% {-webkit-transform: rotate(40deg);
-  -moz-transform: rotate(40deg);
-  -o-transform: rotate(40deg);
-  -ms-transform: rotate(40deg);
-  transform: rotate(40deg);}
-  
-  
-  
-  }
+         
+@keyframes keyframes1 {
+     0% {
+       transform: rotate(-1deg);
+       animation-timing-function: ease-in;
+            }
+      50% {
+       transform: rotate(1deg); 
+       animation-timing-function: ease-out;
+            }
+        }
+
+
+
+.image1 {
+            animation-name: keyframes2;
+            animation-iteration-count: infinite;
+            transform-origin: bottom;
+        }
+         
+  @keyframes keyframes2 {
+            0% {
+                transform: rotate(-1deg);
+                animation-timing-function: ease-in;
+            }
+    
+          
+            50% {
+                transform: rotate(1deg); 
+                animation-timing-function: ease-out;
+            }
+    
+           
+        }
+
