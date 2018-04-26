@@ -1,13 +1,13 @@
-// var trampTwo = "http://www.ranesplayground.com/images/ThePower/tramp-2.png";
-// var trampOne = "http://www.ranesplayground.com/images/ThePower/tramp-1.png";
-// var cuntTwo = "http://www.ranesplayground.com/images/ThePower/cunt-2.png";
-// var cuntOne = "http://www.ranesplayground.com/images/ThePower/cunt-1.png";
-// var katieTwo = "http://www.ranesplayground.com/images/ThePower/katie-2.png";
-// var katieOne = "http://www.ranesplayground.com/images/ThePower/katie-1.png";
-// var kimTwo = "http://www.ranesplayground.com/images/ThePower/kim-2.png";
-// var kimOne = "http://www.ranesplayground.com/images/ThePower/kim-1.png";
-// var kratzTwo = "http://www.ranesplayground.com/images/ThePower/kratz-2.png";
-// var kratzOne = "http://www.ranesplayground.com/images/ThePower/kratz-1.png";
+var trampTwo = "http://www.ranesplayground.com/images/ThePower/tramp-2.png";
+var trampOne = "http://www.ranesplayground.com/images/ThePower/tramp-1.png";
+var cuntTwo = "http://www.ranesplayground.com/images/ThePower/cunt-2.png";
+var cuntOne = "http://www.ranesplayground.com/images/ThePower/cunt-1.png";
+var katieTwo = "http://www.ranesplayground.com/images/ThePower/katie-2.png";
+var katieOne = "http://www.ranesplayground.com/images/ThePower/katie-1.png";
+var kimTwo = "http://www.ranesplayground.com/images/ThePower/kim-2.png";
+var kimOne = "http://www.ranesplayground.com/images/ThePower/kim-1.png";
+var kratzTwo = "http://www.ranesplayground.com/images/ThePower/kratz-2.png";
+var kratzOne = "http://www.ranesplayground.com/images/ThePower/kratz-1.png";
 
 
 
@@ -112,7 +112,12 @@ $( ".image,.image1" ).click( function() {
 });
   
 
-
+var audioTramp = $("#trampSound")[0];
+var audioHunt = $("#huntSound")[0];
+var audioKanye = $("#kanyeSound")[0];
+var audioKim = $("#kimSound")[0];
+var audioKratz= $("#kratzSound")[0];
+var audioKatie = $("#katieSound")[0];
 
   $(".tramp").click(function() {
   audioTramp.play();
