@@ -237,3 +237,22 @@ img.mac-chrome {
     margin-left: -10vw;
   }
 }
+
+
+.image.with-phone {
+  position: relative;
+}
+
+img.phone {
+  width: 59%;
+  height: auto;
+}
+
+.image.with-phone video {
+  width: 38%;
+  height: auto;
+  position: absolute;
+  top: 24%;
+  left: 31%;
+}
+
