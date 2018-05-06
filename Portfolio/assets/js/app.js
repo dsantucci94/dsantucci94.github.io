@@ -1,82 +1,71 @@
-$('.item').click(function() {
-  //is the item already in the cart?
-  //has the user already clicked this item?
-  
-  if (!$(this).hasClass('in-cart')){
-  
-  
-      //Add in-cart class to iterms that have been clicked
-      $(this).addClass('in-cart');
+/*****
+Global objects to be used
+*****/
+var dom = function(id, v, isLocked){
+  this.id = id;
+  this.obj = document.getElementById(this.id);
+  this.v = (typeof v === 'undefined') ? null : v;
+  this.isLocked = (typeof isLocked === 'undefined') ? false : isLocked;
+  this.centerH = function(){
+    this.obj.style.left = window.innerWidth/2 - this.obj.offsetWidth/2 + "px";
+    this.v = new vect(this.obj);
+  };
+  this.centerV = function(){
+    this.obj.style.top = window.innerHeight/2 - this.obj.offsetHeight/2 + "px";
+    this.v = new vect(this.obj);
+  };
+}
+var vect = function(obj, xf, yf){
+  this.xi = (typeof obj === 'undefined') ? 0 : obj.getBoundingClientRect().left;
+  this.yi = (typeof obj === 'undefined') ? 0 : obj.getBoundingClientRect().top;
+  this.xf = (typeof xf === 'undefined') ? 0 : xf;
+  this.yf = (typeof yf === 'undefined') ? 0 : yf;
+  this.m = this.xf-this.xi == 0 ? 0 : (this.yf-this.yi)/(this.xf-this.xi);
+}
 
-  
-  
-      //increment the cart number
-      //find current value of .item-count
-      //add 1 to current .item-count
-      //represent new cart number in html on .item-count
-  
-      var current_count = $('.item-count'). html(),
-          current_value = Math.abs(current_count),
-          new_count     = current_value + 1;
-          
-      $('.item-count').html(new_count);
-      $(this).addClass('in-cart');
-      //*add item to cart
-      add_to_cart(this);
+
+/*****
+DOM objects
+*****/
+var logo = new dom("logo");
+logo.centerH();
+logo.v.xf = 40;
+logo.v.yf = 10;
+
+var banner = new dom("banner");
+
+
+/*****
+Event Listeners
+*****/
+window.addEventListener("windowScroll", function (e) {
+  if(e.detail.y >= 400){
+    logo.obj.style.left = logo.v.xf + "px";
+    logo.obj.style.top = logo.v.yf + "px";
+    banner.obj.style.height = "70px";
+    banner.obj.style["box-shadow"] = "0px 10px 20px black";
+    //logo.isLocked = true;
   }
-
-  });
-
-  $('.cart-toggle').click(function() {
-      $('.cart').toggleClass('hide');
-  }); 
-
-function add_to_cart(line_item) {
-  // get img and price of item clicked 
-  // inject html with img and price 
-  var value = $(line_item).data('value'), 
-      price = $(line_item).data('price'),
-      img = $(line_item).data('img'), 
-      target = $(line_item).data('target'), 
-      line_item_html = '<div data-target="' + target + '" data-value="' + value + '" class="line-item"><div class="line-item-img ' + img + '"></div><div class="line-item-price">' + price + '</div></div>';
-
-  $('.line-items').prepend(line_item_html);
-  update_total(value);
-}
-
-function update_total(line_item_value) {
-  var current_value = $('.total').data('value'),
-      new_value = current_value + line_item_value,
-      new_price = new_value.toLocaleString();
+  else{
+    logo.obj.style.left = logo.v.xi - ((logo.v.xi-logo.v.xf)/logo.v.yi)*e.detail.y*e.detail.y/logo.v.xi + "px";
+    logo.obj.style.top = logo.v.yi - ((logo.v.yi-logo.v.yf)/logo.v.yi)*e.detail.y*e.detail.y/logo.v.xi + "px";
+  }
+}, false);
 
 
-  $('.total').html(new_price);
-  $('.total').data('value', new_value);
-
-}
-$ ('.line-items').on('click', '.line-item', function(){
-    
+/*****
+Window scroll event
+*****/
+window.onscroll = function(){
+  var y = window.pageYOffset;
   
-  
-    var current_value = $('.total').data('value'),
-        line_item_value = $(this).data('value'),
-        new_value= current_value - line_item_value,
-        new_price =new_value.toLocaleString();
-    $(this).html('').removeClass('line-item');
-    $('.total').html(new_price);
-    $('.total').data('value', new_value);
-
-
-    var shopping_item_class =$(this).data('target');
-    $(shopping_item_class).removeClass('in-cart');
-
-    var current_item_count = $('.item-count').html(),
-        updated_item_count = current_item_count -1;
-
-        $('.item-count').html(updated_item_count);
-});
-
-
-// click(function(){
-// 	alert('hello');
-// })
+  if(y >= 0){
+    if(y == 0){
+      banner.obj.style.height = "0px";
+    }
+    if(!logo.isLocked){
+      var windowScroll = new CustomEvent("windowScroll", { detail: { y: y } });
+      window.dispatchEvent(windowScroll);
+    }
+  }
+};

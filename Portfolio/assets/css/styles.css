@@ -1,13 +1,22 @@
 * { box-sizing: border-box; }
 div { vertical-align: top; }
 
+body {
+  margin:0px;
+}
+
 h1 {
   text-align: center;
   font-family: 'Avenir Next';
   font-weight: lighter;
   /* font-style: ultra light; */
-  font-size: 64px;
+  font-size: 82px;
   margin-bottom: -15px;
+}
+
+.read-more {
+  text-decoration: none;
+  border-bottom: 1px solid;
 }
 
 /* p{
@@ -17,12 +26,9 @@ h1 {
 } */
 
 h2{
-  /* text-align: left; */
-  /* margin-left: 30px; */
   font-family: 'Avenir Next', Medium; 
-  font-size: 16px;
-  /* padding-left: 80px; */
-  margin-bottom: -15px;
+  font-size: 36px;
+  line-height: 42px;
   text-align: left;
 }
 
@@ -35,7 +41,7 @@ p {
 .header {
   margin: 0 0 100px 0;
   text-align: center;
-  padding-bottom: -100px;
+  padding-bottom: 50px;
   
 }
 
@@ -45,7 +51,7 @@ p {
   margin: 0 auto;
   /* padding-left: 200px; */
   /* padding-right: 200px; */
-  padding-bottom: 100px;
+  padding-bottom: 180px;
   vertical-align: top;
 }
 
@@ -88,8 +94,9 @@ p {
 
 .box{
 	width: 100%;
-	background: #e0ffff;
+	background: #00dfe0;
   padding: 50px;
+  margin: 0px;
   margin-top: -100px;
 }
 
@@ -101,12 +108,11 @@ h3{
   /* text-align: left; */
   /* margin-left: 30px; */
   font-family: 'Avenir Next', Medium; 
-  font-size: 24px;
+  font-size: 28px;
   padding-left: 80px;
-  
 }
 
-.nav {
+/* .nav {
   font-size: 30px;
   position: fixed;
   width: 100%;
@@ -114,7 +120,39 @@ h3{
   top: 0;
   left: 0;
   z-index: 100;
+} */
+
+.topnav{
+  /* background-color: #e0ffff; */
+  overflow: hidden;
 }
+
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: 'Avenir Next', Regular;
+   
+
+}
+
+.topnav a:hover {
+  /* background-color: #ddd; */
+  color: black;
+  text-decoration: underline;
+}
+
+.topnav a.active {
+  font-family: 'Avenir Next'; 
+  /* font-weight: bold; */
+  color: black;
+  text-decoration: underline;
+}
+
+
 
 h4{
   font-family: 'Avenir Next';
@@ -135,7 +173,7 @@ h4{
 }
 
 .process{
-  text-align: center;
+  /* text-align: left; */
   margin: 0 0 100px 0;
   padding-left: 300px;
   padding-right: 300px;
@@ -148,11 +186,13 @@ h5{
   font-family: 'Avenir Next', Medium; 
   font-size: 36px;
   margin-bottom: 10px;
+  text-align: center;
 }
 p2 {
   /* margin-left: 30px; */
   font-family: 'Avenir Next', regular;
   font-size: 16px;
+  text-align: left;
 }
 
 .image img{
@@ -193,17 +233,19 @@ a { color:black; }
   position: relative;
 }
 
-img.mac-chrome {
+img.chrome {
   width: 100%;
   height: auto;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .image.with-chrome video {
-  width: 82%;
+  width: 92%;
   height: auto;
   position: absolute;
-  top: 15%;
-  left: 9%;
+  top: 4%;
+  left: 4%;
 }
 
 @media only screen and (max-width: 960px) {
