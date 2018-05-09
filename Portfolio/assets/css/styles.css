@@ -70,6 +70,8 @@ p {
 .hero img { 
   width: 100%;
   vertical-align: middle;
+  /* padding-left: 10px;
+  padding-right: 10px; */
  }
 
 @media only screen and (max-width: 700px) {
@@ -289,20 +291,63 @@ img.chrome {
 .image.with-phone {
   position: relative;
   padding-top: 10%;
+  padding-left: 30%;
 }
 
 img.phone {
-  width: 36%;
+  width: 54%;
   height: auto;
   margin: 0 !important;
   padding: 0 !important;
 }
 
 .image.with-phone video {
-  width: 30%;
+  width: 30.5%;
   height: auto;
   position: absolute;
   top: 25%;
-  left: 3%;
+  left: 33.5%;
+}
+
+
+.image.with-ipad {
+  position: relative;
+}
+
+img.ipad {
+  width: 100%;
+  height: auto;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.image.with-ipad video {
+  width: 80%;
+  height: auto;
+  position: absolute;
+  top: 6.5%;
+  left: 10%;
+}
+
+.image.with-phone2 {
+  position: relative;
+  padding-top: 10%;
+  padding-left: 28%;
+}
+
+img.phone2 {
+  width: 58%;
+  height: auto;
+  margin: 0 !important;
+  padding: 0 !important;
+  
+}
+
+.image.with-phone2 video {
+  width: 33%;
+  height: auto;
+  position: absolute;
+  top: 23%;
+  left: 32.5%;
 }
 
