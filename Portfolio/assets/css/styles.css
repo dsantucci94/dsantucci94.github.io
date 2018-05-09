@@ -125,16 +125,18 @@ h3{
 .topnav{
   /* background-color: #e0ffff; */
   overflow: hidden;
+  text-align: center;
 }
 
 .topnav a {
-  float: left;
+  display: inline-block;
   color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
   font-family: 'Avenir Next', Regular;
+  font-weight: lighter;
    
 
 }
@@ -189,10 +191,13 @@ h5{
   text-align: center;
 }
 p2 {
-  /* margin-left: 30px; */
+  display: block;
   font-family: 'Avenir Next', regular;
   font-size: 16px;
   text-align: left;
+  margin: 0 auto;
+  max-width: 650px;
+  letter-spacing: .5px;
 }
 
 .image img{
@@ -283,18 +288,21 @@ img.chrome {
 
 .image.with-phone {
   position: relative;
+  padding-top: 10%;
 }
 
 img.phone {
-  width: 59%;
+  width: 36%;
   height: auto;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .image.with-phone video {
-  width: 38%;
+  width: 30%;
   height: auto;
   position: absolute;
-  top: 24%;
-  left: 31%;
+  top: 25%;
+  left: 3%;
 }
 

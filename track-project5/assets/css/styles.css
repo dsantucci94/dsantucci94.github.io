@@ -1,95 +1,35 @@
-body {
-  background-color:#fff;
+
+body{
+	margin: 0px;
+	background-color: black;
 }
-.header {
-  width:100%;
-  height:90px;
-  display:block;
+
+h1{
+	text-align: center;
+  font-family: 'Impact';
+  font-weight: bolder;
+  /* font-style: ultra light; */
+  font-size: 202px;
+	margin-bottom: 15px;
+	color:white;
+}
+
+
+.main-image {
+  background-image: url("https://www.usmagazine.com/wp-content/uploads/kylie-jenner-2-7f6299b1-1fd2-4ef0-aa94-c75722d1d0de.jpg");
+  max-width: 1200px;
+  height: 2000px;
+	margin: auto;
+	
+}
+
+.main-image:hover {
+  background-image: url("https://www.usmagazine.com/wp-content/uploads/gettyimages-514947864-2e846704-1dd0-4b2e-ab82-038bedf829c4.jpg");
+  -webkit-transition:  background-image 1s ease;
+-moz-transition:  background-image 1s ease;
+-ms-transition:  background-image 1s ease;
+-o-transition:  background-image 1s ease;
+transition:  background-image 1s ease;
   
 }
-.name {
-  text-align:center;
-  font-family:"Cantarell";
-  font-weight:700;
-  font-size:30px;
-  color:#343436;
-}
-
-.intro {
-  text-align:center;
-  font-family:"Cantarell";
-  font-size:20px;
-  margin-bottom:1%;  
-}
-
-.header h1 {
-  font-family:"Cantarell";
-  font-size:50px;
-  text-align:center;
-  color:#00baba;
-}
-
-
-.container {
-  width:100%;
-  height:auto;
-  display:block;
-  text-align:center;
-}
-
-.image, .image1 {
-  position:relative;
-  display:inline-block;
-  width:auto;
-  height:auto;
-
-}
-
-.image1 {
-  animation-delay: -0.75; 
-  animation-duration: 1s;
-}
-
-
-    .image {
-       animation-name: keyframes1;
-       animation-iteration-count: infinite;
-       transform-origin: 50% 10%;
-       animation-delay: -0.75; 
-  animation-duration: .8s;
-  }
-         
-@keyframes keyframes1 {
-     0% {
-       transform: rotate(-1deg);
-       animation-timing-function: ease-in;
-            }
-      50% {
-       transform: rotate(1deg); 
-       animation-timing-function: ease-out;
-            }
-        }
-
-
-
-.image1 {
-            animation-name: keyframes2;
-            animation-iteration-count: infinite;
-            transform-origin: bottom;
-        }
-         
-  @keyframes keyframes2 {
-            0% {
-                transform: rotate(-1deg);
-                animation-timing-function: ease-in;
-            }
-    
-          
-            50% {
-                transform: rotate(1deg); 
-                animation-timing-function: ease-out;
-            }
-    
-           
-        }
 
